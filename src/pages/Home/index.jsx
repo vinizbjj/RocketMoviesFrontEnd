@@ -3,7 +3,6 @@ import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { GrAdd } from "react-icons/gr";
 import { RiStarSFill, RiStarLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
 import { Note } from "../../components/Note";
 
 export function Home() {
@@ -18,7 +17,7 @@ export function Home() {
       </Section>
 
       <main>
-        <Content>
+        <Content to={"/details/1"}>
           <Note
             data={{
               title: "Interstelar",
@@ -63,7 +62,6 @@ export function Home() {
               ],
             }}
           />
-
         </Content>
       </main>
     </Container>

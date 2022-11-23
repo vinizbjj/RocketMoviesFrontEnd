@@ -28,6 +28,14 @@ main::-webkit-scrollbar-thumb {
     border: 3px solid ${({ theme }) => theme.COLORS.PINK};
 }
 
+main section p {
+    padding: 0 104px;
+    margin-top: 40px;
+    min-height: 300px;
+    -webkit-box-orient: horizontal;
+    overflow-y: scroll;
+}
+
 `;
 
 export const Star = styled.button`

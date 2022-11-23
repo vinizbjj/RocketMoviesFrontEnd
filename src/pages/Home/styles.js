@@ -56,7 +56,7 @@ main::-webkit-scrollbar-thumb {
     border: 3px solid ${({ theme }) => theme.COLORS.PINK};
 } 
 
-> main div button p{
+> main a button p{
     text-align: left;
     font-weight: 400;
     font-size: 16px;
@@ -94,7 +94,7 @@ export const NewNote = styled(Link)`
 
 `;
 
-export const Content = styled.div`
+export const Content = styled(Link)`
 
 
 margin-bottom: 32px;
@@ -107,14 +107,14 @@ a {
 
 }
 
-> a h4 {
+>  h4 {
     width: 100px;
     font-size: 2.4rem;
     font-weight: 700;
     cursor: pointer;
 }
 
-> p {
+>  p {
     display: -webkit-box;
     max-width: 100%;
     height: 50.2px;
@@ -128,12 +128,12 @@ a {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
 }
 
-> button svg {
+>  button svg {
     font-size: 16px;
     padding-right: 2px;
     margin: 2px 0;
 }
-> span {
+>  span {
     line-height: 65px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
 }
