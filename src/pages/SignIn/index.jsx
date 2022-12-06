@@ -4,7 +4,12 @@ import { FiMail, FiLock, FiUser } from "react-icons/fi";
 import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 
+import { MyContext } from "../../hooks/auth";
+import { useContext } from "react";
+
 export function SignIn() {
+  const data = useContext(MyContext);
+  console.log(data);
   return (
     <Container>
       <Form>
