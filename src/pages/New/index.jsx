@@ -30,6 +30,22 @@ export function New() {
   }
 
   async function handleNewNote() {
+    if (!title) {
+      return alert("Digite o titulo da nota")
+    }
+
+    if (rating < 1 || rating > 5) {
+      return alert("Digite sua nota de 1 a 5")
+    }
+
+    if (!title) {
+      return alert("Digite o titulo da nota")
+    }
+    if (newTag) {
+      return alert("Você deixou uma tag no  campo par adicionar, mas não clicou em adicionar, clique para adicionar ou remova o conteudo")
+    }
+
+
     await api.post("/notes", {
       title,
       description,
@@ -57,6 +73,7 @@ export function New() {
               onChange={e => setTitle(e.target.value)}
             />
             <Input
+              type='number'
               placeholder="Sua nota(de 0 a 5)"
               onChange={e => setRating(e.target.value)}
 
