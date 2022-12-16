@@ -24,7 +24,9 @@ export function Home() {
               icons: [
                 { id: "1", name: <RiStarSFill /> },
                 { id: "2", name: <RiStarSFill /> },
-                { id: "3", name: <RiStarLine /> },
+                { id: "3", name: <RiStarSFill /> },
+                { id: "4", name: <RiStarSFill /> },
+                { id: "5", name: <RiStarLine /> },
               ],
               description: `Pragas nas colheitas fizeram a civilização humana regredir para uma
               sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto

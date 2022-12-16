@@ -28,7 +28,7 @@ export const Container = styled.div`
 
     > input{
         height: 56px;
-        max-width: ${({ isNew }) => isNew ? "100%" : "113px"};
+        max-width: ${({ isNew }) => isNew ? "100%" : "100%  "};
         padding: 16px;
         border-radius: 10px;
 
@@ -41,7 +41,7 @@ export const Container = styled.div`
         border: 0;
 
         box-shadow: 0 0 0 0;
-  outline: 0;
+        outline: 0;
 
         &::placeholder{
             color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE}
