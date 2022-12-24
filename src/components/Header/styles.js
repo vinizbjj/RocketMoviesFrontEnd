@@ -73,7 +73,7 @@ export const Profile = styled.div`
     }
 
     > div :nth-child(1){
-    min-width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     padding-left: 8px;
 }

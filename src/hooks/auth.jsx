@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { api } from '../services/api'
 
 const AuthContext = createContext({});
+const SearchContext = createContext({});
 
 function AuthProvider({ children }) {
     const [data, setData] = useState({})
@@ -96,4 +97,29 @@ function useAuth() {
 
 }
 
-export { AuthProvider, useAuth };
+function SearchProvider({ children }) {
+    const [notes, setNotes] = useState([])
+    const [search, setSearch] = useState({})
+
+    useEffect(() => {
+        async function fetchNotes() {
+          const response = await api.get(`/notes?title=${search}`)
+          setNotes(response.data)
+          console.log(notes)
+        }
+    
+        fetchNotes()
+      }, [search])
+
+
+    return (
+        <SearchContext.Provider value={{
+            signIn,
+
+        }}>
+            {children}
+        </SearchContext.Provider>
+    )
+}
+
+export { AuthProvider, useAuth, SearchProvider };

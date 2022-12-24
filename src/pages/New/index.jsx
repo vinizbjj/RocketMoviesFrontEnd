@@ -34,15 +34,15 @@ export function New() {
       return alert("Digite o titulo da nota")
     }
 
-    if (rating < 1 || rating > 5) {
+    if (rating < 1 || rating > 5 || (!rating)) {
       return alert("Digite sua nota de 1 a 5")
     }
 
-    if (!title) {
+    if (!TagsMovies) {
       return alert("Digite o titulo da nota")
     }
     if (newTag) {
-      return alert("Você deixou uma tag no  campo par adicionar, mas não clicou em adicionar, clique para adicionar ou remova o conteudo")
+      return alert("Você deixou uma tag no  campo para adicionar, mas não clicou em adicionar, clique para adicionar ou remova o conteudo")
     }
 
 
@@ -59,7 +59,11 @@ export function New() {
 
   return (
     <Container>
-      <Header />
+      <Header>
+      <Input placeholder="Pesquisar pelo título"
+         />
+      </Header>
+      
       <main>
         <Form>
           <Link to={"/"}>
